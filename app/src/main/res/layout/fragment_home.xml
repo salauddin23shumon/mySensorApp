@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sensor Data"
+            android:textAlignment="center"
+            android:textSize="35sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/parent"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="10dp"
+        android:layout_weight="4"
+        android:background="#FFFFFF">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_ver"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent=".5" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_hor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent=".5" />
+
+        <LinearLayout
+            android:id="@+id/topLeft"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="4dp"
+            android:background="@drawable/round_shape"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@+id/guideline_hor"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintHeight_percent=".4"
+            app:layout_constraintRight_toLeftOf="@+id/guideline_ver">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="GyroScope"
+                android:textColor="@color/white"
+                app:autoSizeMaxTextSize="30sp"
+                app:autoSizeMinTextSize="16sp"
+                app:autoSizeStepGranularity="4sp"
+                app:autoSizeTextType="uniform" />
+
+            <TextView
+                android:id="@+id/tlTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="value"
+                android:textColor="@color/white"
+                app:autoSizeMaxTextSize="30sp"
+                app:autoSizeMinTextSize="16sp"
+                app:autoSizeStepGranularity="4sp"
+                app:autoSizeTextType="uniform" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/topRight"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="4dp"
+            android:background="@drawable/round_shape"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@+id/guideline_hor"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintHeight_percent=".4"
+            app:layout_constraintLeft_toRightOf="@+id/guideline_ver">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Light"
+                android:textColor="@color/white"
+                app:autoSizeMaxTextSize="30sp"
+                app:autoSizeMinTextSize="16sp"
+                app:autoSizeStepGranularity="4sp"
+                app:autoSizeTextType="uniform" />
+
+            <TextView
+                android:id="@+id/trTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="value"
+                android:textColor="@color/white"
+                app:autoSizeMaxTextSize="30sp"
+                app:autoSizeMinTextSize="16sp"
+                app:autoSizeStepGranularity="4sp"
+                app:autoSizeTextType="uniform" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/bottomLeft"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="4dp"
+            android:background="@drawable/round_shape"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintHeight_percent=".4"
+            app:layout_constraintRight_toLeftOf="@+id/guideline_ver"
+            app:layout_constraintTop_toBottomOf="@+id/guideline_hor">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Proximity Distance"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                app:autoSizeMaxTextSize="30sp"
+                app:autoSizeMinTextSize="16sp"
+                app:autoSizeStepGranularity="2sp"
+                app:autoSizeTextType="uniform" />
+
+            <TextView
+                android:id="@+id/blTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="value"
+                android:textColor="@color/white"
+                app:autoSizeMaxTextSize="30sp"
+                app:autoSizeMinTextSize="16sp"
+                app:autoSizeStepGranularity="4sp"
+                app:autoSizeTextType="uniform" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/bottomRight"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="4dp"
+            android:background="@drawable/round_shape"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintHeight_percent=".4"
+            app:layout_constraintLeft_toRightOf="@+id/guideline_ver"
+            app:layout_constraintTop_toBottomOf="@+id/guideline_hor">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Accelerometer"
+                android:textColor="@color/white"
+                app:autoSizeMaxTextSize="30sp"
+                app:autoSizeMinTextSize="16sp"
+                app:autoSizeStepGranularity="2sp"
+                app:autoSizeTextType="uniform" />
+
+            <TextView
+                android:id="@+id/brTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="value"
+                android:textColor="@color/white"
+                app:autoSizeMaxTextSize="30sp"
+                app:autoSizeMinTextSize="16sp"
+                app:autoSizeStepGranularity="4sp"
+                app:autoSizeTextType="uniform" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/bottom"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="  refresh  "
+            app:cornerRadius="20dp"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+</LinearLayout>
+
