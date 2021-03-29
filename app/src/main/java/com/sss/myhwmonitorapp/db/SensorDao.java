@@ -26,10 +26,10 @@ public interface SensorDao {
 //    void update(int nId, double nData);
 
     @Query("SELECT * FROM sensor_tbl ")
-    List<SensorModel> getAllData();
+    LiveData<List<SensorModel>> getAllData();
 
     @Query("SELECT * FROM sensor_tbl ORDER BY id ASC")
-    List<SensorModel> getAllDatAsc();
+    LiveData<List<SensorModel>> getAllDatAsc();
 
     @Query("SELECT EXISTS (SELECT * FROM sensor_tbl )")
     boolean ifRowExist();

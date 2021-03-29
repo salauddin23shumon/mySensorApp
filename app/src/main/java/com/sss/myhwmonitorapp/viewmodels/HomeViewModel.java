@@ -20,7 +20,7 @@ public class HomeViewModel extends AndroidViewModel {
 
     public HomeViewModel(@NonNull Application application) {
         super(application);
-        sensorRepo =  SensorRepo.getInstance(application);
+        sensorRepo = SensorRepo.getInstance(application);
 //        sensorRepo.doSomeStuff();
     }
 
